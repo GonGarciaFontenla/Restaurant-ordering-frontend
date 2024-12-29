@@ -52,6 +52,7 @@ const Menu = () => {
       
       {/* Botón para agregar un nuevo item */}
       <button onClick={() => navigate('/addMenuItem')}>Add Menu Item</button>
+      <button onClick={() => navigate('/deleteMenuItem')}>Remove Menu Item</button>
     </div>
   );
 };

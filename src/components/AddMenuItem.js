@@ -91,6 +91,10 @@ const AddMenuItem = () => {
                 </div>
                 <div>
                     <label>Description:</label>
+                    <style>
+                        label {'{'} display: block; {'}'};
+                    </style>
+
                     <textarea 
                         value={description} 
                         onChange={(e) => setDescription(e.target.value)} 

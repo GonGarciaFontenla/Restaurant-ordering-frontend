@@ -27,14 +27,14 @@ const Login = () => {
     }
 
     setLoading(true);
-    setError(null); // Clear previous error
+    setError(null); 
     try {
       const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
       const res = await axios.post(`${baseUrl}/api/users/login`, { username, password });
 
       if (res.data?.token) {
         localStorage.setItem('token', res.data.token);
-        navigate('/menu');
+        navigate('/orders');
       } else {
         setError('Login failed: Token not received.');
       }
@@ -81,6 +81,8 @@ const Login = () => {
         <button type="submit" disabled={loading}>
           {loading ? 'Logging in...' : 'Login'}
         </button>
+        <button onClick={() => navigate('/createUser')}>Crear nuevo usuario</button>
+
       </form>
     </div>
   );
