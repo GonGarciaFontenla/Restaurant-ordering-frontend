@@ -1,0 +1,46 @@
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.name {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.description {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.price {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.iconAvailable {
+  color: green;
+  margin-right: 8px;
+}
+
+.iconNotAvailable {
+  color: red;
+  margin-right: 8px;
+}

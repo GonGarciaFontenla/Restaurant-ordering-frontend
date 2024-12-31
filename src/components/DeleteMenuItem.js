@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; 
 
 const DeleteMenuItem = () => {
     const [menuItems, setMenuItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     // Cargar el menú al montar el componente
     useEffect(() => {
@@ -65,6 +67,8 @@ const DeleteMenuItem = () => {
                     ))}
                 </ul>
             )}
+
+            <button onClick={() => navigate('/menu')}>Accept</button>
         </div>
     );
 };
